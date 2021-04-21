@@ -2,20 +2,31 @@
 
 + hello
 - Yo wasup
+- Hello, what's your name?
+- Hello, how are you?
+
++ how are you
+- I'm well thank you :-)
 
 + _
 % hello what is your name
 - Nice to meet you <formal>!
 
 + my name is *
-- Nice to meet you <star>
+- Nice to meet you <star> <name=star>
 - Nice meeting you <star>
+- Nice to meet you <star> , I'm your reflection!
+- Nice meeting you <star> , I'm you!
+- Nice meeting you <star> , I'm your mirror. 
+- Nice to meet you <star> , I'm a mirror. 
 
 + thank you
-- You are welcome
+- You are welcome 
 - Welcome
 - No problem
 - No worries!
+- All good!
+
 
 + *
 - Sorry did not get what you said
