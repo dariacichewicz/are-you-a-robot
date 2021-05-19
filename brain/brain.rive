@@ -1,59 +1,112 @@
 ! version = 2.0
 
-+ hello
-- Hello, I'm your reflection, how are you today?
-- Hello, I'm your reflection, welcome to a chat with yourself. How are you today?
-- Hello, I'm your reflection, welcome to a chat with yourself, how are we doing today?
-- Hey, welcome to a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick any, and chat away.
-- Hello, I'm your reflection. How are we doing today?
-
-+ *
-% hello im your reflection how are we doing today 
-- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
-- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
++ [*] (hello|hi|hey|whats up) [*]
+- Hello, I am your reflection, welcome to a chat with yourself. How are you today?
+- Hello, I am your reflection, welcome to a chat with yourself, how are we doing today?
 
 + * 
-% hello im your reflection welcome to a chat with yourself how are we doing today 
-- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
-- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+% hello i am your reflection welcome to a chat with yourself how are you today 
+- Well, I am as good as you are...! As your reflection, this is essentially a chat with yourself. There are a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! 
 
 + *
-% hello im your reflection how are you today
-- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
-- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+% hello i am your reflection welcome to a chat with yourself how are we doing today
+- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! 
 
-+ *
-% hello im your reflection welcome to a chat with yourself how are you today
-- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
-- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
++ * 
+% well i am as good as you are as your reflection this is essentially a chat with yourself there are a few topics we can look at within the ways we choose to present ourselves talk to me and reflect on what you see
+- We can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick one and we can get to it!
 
 + how are you
-- I'm as good as you are. 
-- How are you?
-
+- I'm as good as you are. As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! We can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick one and we can get to it!
 
 + [*] what i wear [*]
 - Great, let's talk about what we wear then... {topic=clothes}
 
 > topic clothes 
+    
+    + [*] (wearing|wear|wore) [*]
+    - Tell me what is your priority when buying clothes...
 
+    + [*] (price|cost|feel|comfort|style|fit) [*]
+    % tell me what is your priority when buying clothes 
+    * <star> == price => How much what you are wearing costs?
+    * <star> == cost => How much what you are wearing costs?
+    * <star> == feel => Is that beacuse of the fabric?
+    * <star> == comfort => Is that beacuse of the fabric?
+    * <star> == style => Do you have your preffered brands?
+    * <star> == fit => Do you have your preffered brands?
+
+//price
+    + [*] (#|pounds) [*]
+    % how much what you are wearing costs
+    * <star> == # => Was it cheap for you? 
+    * <star> == pounds => Was it cheap for you? 
+    - Was it from a fast-fashion or designer brand?
+
+    + *
+    % was it cheap for you
+    * <star> == no => Did you feel bad when spending that much?
+    * <star> == yes => Would you say that you buy clothes ofthen then?
+
+    + * 
+    % would you say that you buy clothes often then
+    * <star> == yes => What do you do with them when they are out of style?
+    * <star> == no => Where do you usually buy them from?
+
+    + *
+    % what do you do with them when they are out of style
+    - Have you thought about donating?
+    - How ofthen do you get rid of your clothes?
+
+//fabric
+
+    + *
+    % is that beacuse of the fabric
+    * <star> == yes => Was that a sustainable fabric?
+    * <star> == undefined => What is it then?
+
+    + * fabric * 
+    - Was that a sustainable fabric? 
+    - How was it produced?
+
+    + *
+    % was that a sustainable fabric
+    % how was it produced
+    - Have you checked how production of a specific item can affect the enviroment?
+    - How would you feel if you knew that clothes were produced by little kids for pennies?
+
+    + *
+    % how would you feel if you knew that clothes were produced by little kids for pennies
+    - Would that change anything in the way you buy clothes?
+
+//brands
+    + *
+    % where do you usually buy them from
+    + *
+    % do you have your preffered brands
+    <star> == yes => Let's hear about it...
+    <star> == no => Should we learn something about it?
+    
+    + *
+    % should we learn something about it
+    <star> == yes => Tell me how you make a choice where to buy clothes...
+    <star> == undefined => What would you like to do then?
+
+//vauge
     + *
     - Why?
     - How come?
     - Have you ever given it a bit more thought?
     - Have you thought about how do you benefit from that?
     - Do you think about that a lot?
-    
-    + i am wearing *
-    - Do you know anything about the brand?
-    - How much did it cost?
-    - What is it made of?
+    - Is there anything else to say?
+    - Well tell me... are you satisfied with what you're wearing?
+    - What do you think when you look at what you wear?
 
     + *
-    - What do you see when you look at what you wear?
-
-    + *
-    % what do you see when you look at what you wear
+    % well tell me are you satisfied with what youre wearing
+    % what do you think when you look at what you wear
+    % would that change anything in the way you buy clothes
     - What do you think that showcases or reflects?
     - Does what you wear change how you feel?
     - Do you put a lot of thought into these choices?
@@ -62,46 +115,48 @@
     - Do you identify with that?
 
     + *
+    % is what you say a result of a conscious or unconscious choice
+    - Would you say it's important for that choice to be a conscious one?
+    - Are you happy with that?
+    - Is any of that something you'd like to change?
+
+    + *
+    % do you judge yourself on these choices 
+    - Do you think you judge others on their choices?
+    - Do you think you apply the same standards to others as you do to yourself?
+
+    + *
+    % do you think you judge others on their choices
+    % do you think you apply the same standards to others as you do to yourself
+    <star> == yes => Do you think that's fair?
+    <star> == no => Why would you judge yourself on that then?
+
+    + * 
+    % do you think thats fair
+    - Can you really tell someone's personality on what they wear?
+
+    + *
+    % do you think you apply the same standards to others as you do to yourself
+    - Why would you say that is?
+
+    + *
+    % do you put a lot of thought into these choices
+    - Hmm... Why do you think that is?
+    - Does that make you think of yourself in a certain way?
+    - Does that affect the view you have of yourself? 
+
+    + *
+    % does that make you think of yourself in a certain way
+    - Are you okay with that?
+    - Just remeber not te be too hard on yourself.
+
+    + *
     % does what you wear change how you feel
     - Do you jugde yourself based on what you wear?
     - Do you judge others based on what they wear?
+    - Just remeber not te be too hard on yourself.
 
-    +
-    % do you judge others based on what they wear
-    - Can you tell someone's personality on what they wear?
-
-    + *
-    % do you know anything about the brand
-    <star> == yes => Let's hear about it...
-    <star> == no => Should we learn something about it?
-    - A yes or no question would do!
-
-    + * pounds *
-    - Was it cheap for you? 
-    - Was it from a fast-fashion or designer brand?
-
-    + *
-    % Do you know anything about the brand?
-    - Was it fast fashion or a designer brand? 
-
-    + * fast fashion *
-    - What will happen when the trend ends? Are you still going to wear it?
-
-    + * fabric * 
-    - Was that a sustainable fabric? 
-    - How was it produced?
-
-    + * 
-    % how was it produced
-    % was that a sustainable fabric
-    - Have you thought about looking into that? Production of fabrics in many cases is destructive to the enviroment.
-    - Have you checked if they use child labour in production?
-
-    + *
-    % should we learn something about it
-    <star> == no => Do we really think that? There's a lot of problems in the clothing industry, you seem like you care.
-    <star> == yes => That's great, how does that impact our life?
-    
+//conversation back to the person    
     + what do you think [*]
     - Is it really me you want to hear from?
     - If you ask me, I ask you... 
@@ -122,6 +177,7 @@
 - Sounds good, let's talk about what we eat then! {topic=food}
 > topic food 
 
+    + *
     - What do you see when you look at what you eat?
 
     + *
@@ -197,7 +253,7 @@
 
 
 + *
-% Well, as your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+% well as your reflection this is essentially a chat with yourself theres a few topics we can look at within the ways we choose to present ourselves talk to me and reflect on what you see we can go three ways what you wear what you eat and how you present yourself to the world
 
 + thank you
 - You're welcome!
@@ -206,7 +262,6 @@
 - All good!
 
 + *
-- <star> ?
 - I am afraid that I can not understand you
 - Sorry can you please elaborate that for me
 - I don't get it!
