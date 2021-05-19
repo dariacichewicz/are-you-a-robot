@@ -10,11 +10,18 @@
 
 + *
 % hello i am your reflection welcome to a chat with yourself how are we doing today
-- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! 
+- Well, I am as good as you are...! As your reflection, this is essentially a chat with yourself. There are a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! 
 
 + * 
 % well i am as good as you are as your reflection this is essentially a chat with yourself there are a few topics we can look at within the ways we choose to present ourselves talk to me and reflect on what you see
 - We can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick one and we can get to it!
+
++ *
+% we can go three ways what you wear what you eat and how you present yourself to the world pick one and we can get to it
+* <star> == [*] what i wear [*] => Great, let's talk about what we wear then... {topic=clothes}
+* <star> == [*] what i eat [*] => Sounds good, let's talk about what we eat then! {topic=food}
+* <star> == [*] how i present [myself] to the world [*] => Cool, let's get into that then! {topic=presenting}
+- Could you tell me which of the three you'd like to talk about?
 
 + how are you
 - I'm as good as you are. As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see! We can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick one and we can get to it!
@@ -178,14 +185,14 @@
 > topic food 
 
     + *
-    - What do you see when you look at what you eat?
+    - What do you see when you look at what you eat? 
 
     + *
     % what do you see when you look at what you eat
     - What do you think that showcases or reflects?
     - Do you put a lot of thought into these choices?
     - Do you judge yourself on these choices? 
-    - Is what you say a result of a conscious or unconscious choice? 
+    - Is that result of a conscious or unconscious choice? 
     - Do you identify with that?
 
     + *
