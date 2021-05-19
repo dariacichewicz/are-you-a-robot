@@ -31,6 +31,7 @@
 - I'm as good as you are. 
 - How are you?
 
+
 + [*] what i wear [*]
 - Great, let's talk about what we wear then... {topic=clothes}
 
@@ -38,18 +39,36 @@
 
     + *
     - Why?
+    - How come?
     - Have you ever given it a bit more thought?
     - Have you thought about how do you benefit from that?
     - Do you think about that a lot?
     
     + i am wearing *
     - Do you know anything about the brand?
+    - How much did it cost?
+    - What is it made of?
 
     + *
     - What do you see when you look at what you wear?
+
     + *
     % what do you see when you look at what you wear
-    - what do you think that showcases or reflects?
+    - What do you think that showcases or reflects?
+    - Does what you wear change how you feel?
+    - Do you put a lot of thought into these choices?
+    - Do you judge yourself on these choices? 
+    - Is what you say a result of a conscious or unconscious choice? 
+    - Do you identify with that?
+
+    + *
+    % does what you wear change how you feel
+    - Do you jugde yourself based on what you wear?
+    - Do you judge others based on what they wear?
+
+    +
+    % do you judge others based on what they wear
+    - Can you tell someone's personality on what they wear?
 
     + *
     % do you know anything about the brand
@@ -57,11 +76,45 @@
     <star> == no => Should we learn something about it?
     - A yes or no question would do!
 
+    + * pounds *
+    - Was it cheap for you? 
+    - Was it from a fast-fashion or designer brand?
+
+    + *
+    % Do you know anything about the brand?
+    - Was it fast fashion or a designer brand? 
+
+    + * fast fashion *
+    - What will happen when the trend ends? Are you still going to wear it?
+
+    + * fabric * 
+    - Was that a sustainable fabric? 
+    - How was it produced?
+
+    + * 
+    % how was it produced
+    % was that a sustainable fabric
+    - Have you thought about looking into that? Production of fabrics in many cases is destructive to the enviroment.
+    - Have you checked if they use child labour in production?
+
     + *
     % should we learn something about it
     <star> == no => Do we really think that? There's a lot of problems in the clothing industry, you seem like you care.
     <star> == yes => That's great, how does that impact our life?
     
+    + what do you think [*]
+    - Is it really me you want to hear from?
+    - If you ask me, I ask you... 
+    - What do we think?
+    - I'd say what you say, so what would you say? 
+    - You're asking yourself... 
+    
+    + (what|how) [*] you 
+    - Is it really me you want to hear from?
+    - If you ask me, I ask you... 
+    - What do we think?
+    - I'd say what you say, so what would you say? 
+    - You're asking yourself...
 
 < topic
 
@@ -76,6 +129,14 @@
     - What do you think that showcases or reflects?
     - Do you put a lot of thought into these choices?
     - Do you judge yourself on these choices? 
+    - Is what you say a result of a conscious or unconscious choice? 
+    - Do you identify with that?
+
+    + *
+    % is what you say a result of a conscious or unconscious choice
+    - Would you say it's important for that choice to be a conscious one?
+    - Are you happy with that?
+    - Is any of that something you'd like to change?
 
     + *
     % do you judge yourself on these choices 
@@ -83,22 +144,38 @@
     - Do you think you apply the same standards to others as you do to yourself?
 
     + *
-    % Do you put a lot of thought into these choices?
+    % do you think you apply the same standards to others as you do to yourself
+    - Why would you say that is?
+
+    + *
+    % do you put a lot of thought into these choices
     - Hmm... Why do you think that is?
     - Does that make you think of yourself in a certain way?
     - Does that affect the view you have of yourself? 
 
     + *
-    - I mean, what do you think about that?
+    % does that make you think of yourself in a certain way
+    - Are you okay with that?
 
+    + what do you think [*]
+    - Is it really me you want to hear from?
+    - If you ask me, I ask you... 
+    - What do we think?
+    - I'd say what you say, so what would you say? 
+    - You're asking yourself... 
+    
+    + (what|how) [*] you 
+    - Is it really me you want to hear from?
+    - If you ask me, I ask you... 
+    - What do we think?
+    - I'd say what you say, so what would you say? 
+    - You're asking yourself...
+        
     + *
     - Have you ever thought about that from a different perspective?
     - Do you think about that a lot?
     - I mean, what do you you think about that?
 
-
-    
-    
 
 
 < topic
@@ -117,13 +194,14 @@
 - Nice meeting you <star> , I'm you! <name=star>
 - Nice meeting us <star> ! <name=star>
 - Nice to meet you <star> , I'm your reflection. <name=star>
+
+
 + *
 % Well, as your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
 
 + thank you
-- You are welcome 
-- Welcome
-- No problem
+- You're welcome!
+- No problem!
 - No worries!
 - All good!
 
