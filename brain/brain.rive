@@ -1,24 +1,124 @@
 ! version = 2.0
 
 + hello
-- Yo wasup
-- Hello, what's your name?
-- Hello, how are you?
+- Hello, I'm your reflection, how are you today?
+- Hello, I'm your reflection, welcome to a chat with yourself. How are you today?
+- Hello, I'm your reflection, welcome to a chat with yourself, how are we doing today?
+- Hey, welcome to a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. Pick any, and chat away.
+- Hello, I'm your reflection. How are we doing today?
+
++ *
+% hello im your reflection how are we doing today 
+- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+
++ * 
+% hello im your reflection welcome to a chat with yourself how are we doing today 
+- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+
++ *
+% hello im your reflection how are you today
+- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+
++ *
+% hello im your reflection welcome to a chat with yourself how are you today
+- <star> = [good] => I'm happy to hear that! I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
+- Well, I'm as good as you are...! As your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
 
 + how are you
-- I'm well thank you :-)
+- I'm as good as you are. 
+- How are you?
 
-+ _
-% hello what is your name
-- Nice to meet you <formal>!
++ [*] what i wear [*]
+- Great, let's talk about what we wear then... {topic=clothes}
+
+> topic clothes 
+
+    + *
+    - Why?
+    - Have you ever given it a bit more thought?
+    - Have you thought about how do you benefit from that?
+    - Do you think about that a lot?
+    
+    + i am wearing *
+    - Do you know anything about the brand?
+
+    + *
+    - What do you see when you look at what you wear?
+    + *
+    % what do you see when you look at what you wear
+    - what do you think that showcases or reflects?
+
+    + *
+    % do you know anything about the brand
+    <star> == yes => Let's hear about it...
+    <star> == no => Should we learn something about it?
+    - A yes or no question would do!
+
+    + *
+    % should we learn something about it
+    <star> == no => Do we really think that? There's a lot of problems in the clothing industry, you seem like you care.
+    <star> == yes => That's great, how does that impact our life?
+    
+
+< topic
+
++ [*] what i eat [*]
+- Sounds good, let's talk about what we eat then! {topic=food}
+> topic food 
+
+    - What do you see when you look at what you eat?
+
+    + *
+    % what do you see when you look at what you eat
+    - What do you think that showcases or reflects?
+    - Do you put a lot of thought into these choices?
+    - Do you judge yourself on these choices? 
+
+    + *
+    % do you judge yourself on these choices 
+    - Do you think you judge others on their choices?
+    - Do you think you apply the same standards to others as you do to yourself?
+
+    + *
+    % Do you put a lot of thought into these choices?
+    - Hmm... Why do you think that is?
+    - Does that make you think of yourself in a certain way?
+    - Does that affect the view you have of yourself? 
+
+    + *
+    - I mean, what do you think about that?
+
+    + *
+    - Have you ever thought about that from a different perspective?
+    - Do you think about that a lot?
+    - I mean, what do you you think about that?
+
+
+    
+    
+
+
+< topic
+
++ [*] how i present [myself] to the world [*]
+- Cool, let's get into that then! {topic=presenting}
+> topic presenting 
+
+< topic
+
 
 + my name is *
 - Nice to meet you <star> <name=star>
-- Nice meeting you <star>
-- Nice to meet you <star> , I'm your reflection!
-- Nice meeting you <star> , I'm you!
-- Nice meeting you <star> , I'm your mirror. 
-- Nice to meet you <star> , I'm a mirror. 
+- Nice to meet us <star> <name=star>
+- Nice meeting you <star> ! <name=star>
+- Nice meeting you <star> , I'm you! <name=star>
+- Nice meeting us <star> ! <name=star>
+- Nice to meet you <star> , I'm your reflection. <name=star>
++ *
+% Well, as your reflection, this is essentially a chat with yourself. There's a few topics we can look at within the ways we choose to present ourselves. Talk to me and reflect on what you see, we can go three ways; what you wear, what you eat, and how you present yourself to the world. 
 
 + thank you
 - You are welcome 
@@ -27,9 +127,8 @@
 - No worries!
 - All good!
 
-
 + *
-- Sorry did not get what you said
+- <star> ?
 - I am afraid that I can not understand you
 - Sorry can you please elaborate that for me
 - I don't get it!
